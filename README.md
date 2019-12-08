@@ -1,2 +1,2 @@
-# salary-prediction-using-logistic-regression-and-knn
+# salary prediction using logistic regression and k nearest neighbor
 Logistic regression Vs. K nearest neighbour
