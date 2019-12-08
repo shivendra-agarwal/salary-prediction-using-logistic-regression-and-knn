@@ -1,36 +1,36 @@
-###### salary prediction using logistic regression and k nearest neighbor
-# Logistic regression Vs. K nearest neighbour
+#### salary prediction using logistic regression and k nearest neighbor
+#### Logistic regression Vs. K nearest neighbour
 
-# -*- coding: utf-8 -*-
+###### -*- coding: utf-8 -*-
 """
 
 import pandas as pd
 
-# to perfom numerical operations
+###### to perfom numerical operations
 import numpy as np
 
-# to visualize data
+###### to visualize data
 import seaborn as sns
 
-# to partition the data
+###### to partition the data
 from sklearn.model_selection import train_test_split
 
-# import library for logistic regression
+###### import library for logistic regression
 from sklearn.linear_model import LogisticRegression
 
-# import performance metrics, accuracy, confusion matrix
+###### import performance metrics, accuracy, confusion matrix
 from sklearn.metrics import accuracy_score, confusion_matrix
 
-# import data from csv
+###### import data from csv
 data_income=pd.read_csv("income.csv")
 
-# copy of data
+###### copy of data
 data=data_income.copy()
 
 
 """Exploratory data analysis starts here
-#1. Know your data
-#2. Preprceossing data
+###### 1. Know your data
+######2. Preprceossing data
 #3. Cross tablesand visualizations
 """
 #
