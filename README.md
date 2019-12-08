@@ -1,4 +1,4 @@
-#### salary prediction using logistic regression and k nearest neighbor
+#### salary prediction using classification algorithms
 #### Logistic regression Vs. K nearest neighbour
 
 ###### -*- coding: utf-8 -*-
@@ -344,4 +344,4 @@ for i in range(1,20):
 print(Misclassified_sample)
 
 """
-#### We can say that on the given dataset logistic regression and k nearest neighbor does not works well because the accuracy lies between 80% to 85% for both the algorithms. 
+#### We can say that on the given dataset logistic regression and k nearest neighbour does not works well because the accuracy lies between 80% to 85% for both the algorithms. 
