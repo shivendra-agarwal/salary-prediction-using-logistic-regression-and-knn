@@ -40,7 +40,8 @@ print(data.info())
 
 ###### missing values
 print(data.isnull())
-print(data.isnull().sum()) ###### no missing values
+print(data.isnull().sum()) 
+###### no missing values
 
 ###### summary of numerical variables
 summary_num=data.describe()
@@ -51,10 +52,12 @@ summary_cat=data.describe(include="O")
 print(summary_cat)
 
 ###### frequency of each categories
-data['JobType'].value_counts() ######missing values in the form of ?
+data['JobType'].value_counts() 
+###### missing values in the form of ?
 data['EdType'].value_counts()
 data['maritalstatus'].value_counts()
-data['occupation'].value_counts() ######missing values in the form of ?
+data['occupation'].value_counts() 
+###### missing values in the form of ?
 data['relationship'].value_counts()
 data['race'].value_counts()
 data['gender'].value_counts()
@@ -71,15 +74,18 @@ print(np.unique(data['occupation']))
 ###### Same as above
 
 ###### re-reading data to change ' ?' as nan
-data=pd.read_csv("income.csv",na_values=[" ?"]) ######siz of data remains same, only
+data=pd.read_csv("income.csv",na_values=[" ?"]) 
+###### size of data remains same, only
 ###### ? is treated as NaN
 
 ###### ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^2. Pre-processing^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ###### check null values
-print(data.isnull().sum()) ######JobType 1809 occupation 1816
+print(data.isnull().sum()) 
+###### JobType 1809 occupation 1816
 
 ###### check where are nullvalues
-missing=data[data.isnull().any(axis=1)] ###### 1816
+missing=data[data.isnull().any(axis=1)] 
+###### 1816
 ###### axis = 1, atleast one cloumn value is missing
 
 """
@@ -89,7 +95,7 @@ missing=data[data.isnull().any(axis=1)] ###### 1816
 ######   4. occupation inself has only 7 missing values where JobType is never-worked
 """
 data2=data.dropna(axis=0)
-###### axis=0, drop all the rows with missing values ######1816
+###### axis=0, drop all the rows with missing values
 ###### not able to get mechanism or relationship between variables
 ###### explain about 3 types which can be follwoed
 
@@ -109,9 +115,11 @@ print(gender)
 ###### gives percentage distribution
 
 ###### Gender-salesStat relation
-gender_salstat=pd.crosstab(index = data["gender"], columns = data["SalStat"], margins = True, normalize = 'columns') ###### 2x3
+gender_salstat=pd.crosstab(index = data["gender"], columns = data["SalStat"], margins = True, normalize = 'columns') 
+###### 2x3
 print(gender_salstat)
-gender_salstat=pd.crosstab(index = data["gender"], columns = data["SalStat"], margins = True, normalize = 'index') ###### 3x2
+gender_salstat=pd.crosstab(index = data["gender"], columns = data["SalStat"], margins = True, normalize = 'index') 
+###### 3x2
 print(gender_salstat)
 print(gender_salstat) ###### men are more likely to earn
 ###### normalize = 'index' ###### gives row proportion = 1
@@ -132,7 +140,8 @@ sns.boxplot(data["SalStat"],data["age"])
 ###### whereas people between age 35 - 50 morelikely earn greater than 50,000
 ###### we can generate more relationships -  - -   - - - - - - - - 
 
-data2.groupby("SalStat")["age"].median() ###### it gives excat median age with respect to SalStat
+data2.groupby("SalStat")["age"].median() 
+###### it gives excat median age with respect to SalStat
 
 ###### relationship between JobType and SalStat.
 sns.countplot(y=data["JobType"], hue = data["SalStat"])
@@ -335,4 +344,4 @@ for i in range(1,20):
 print(Misclassified_sample)
 
 """
-###### We can say that on the given dataset logistic regression and k nearest neighbor does not works well because the accuracy lies between 80% to 85% for both the algorithms. 
+#### We can say that on the given dataset logistic regression and k nearest neighbor does not works well because the accuracy lies between 80% to 85% for both the algorithms. 
