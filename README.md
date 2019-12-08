@@ -1,4 +1,4 @@
-## salary prediction using logistic regression and k nearest neighbor
+### salary prediction using logistic regression and k nearest neighbor
 # Logistic regression Vs. K nearest neighbour
 
 # -*- coding: utf-8 -*-
