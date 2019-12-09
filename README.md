@@ -1,5 +1,5 @@
 #### salary prediction using classification algorithms
-#### Logistic regression Vs. K nearest neighbour
+##### Logistic regression Vs. K nearest neighbour
 
 ###### -*- coding: utf-8 -*-
 """
