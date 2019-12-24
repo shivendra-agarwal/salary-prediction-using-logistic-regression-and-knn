@@ -346,3 +346,5 @@ print(JobType_SalStat)
 
 """
 #### We can say that on the given dataset logistic regression and k nearest neighbour does not works well because the accuracy lies between 80% to 85% for both the algorithms. 
+
+#### Thank you NPTEL and Prof. Rengaswamy and teaching assistants of course Python for Data Science.
